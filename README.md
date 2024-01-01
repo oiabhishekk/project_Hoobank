@@ -2,4 +2,4 @@
 
 Welcome to my awesome project!
 
-![Project Image](https://github.com/your-username/your-repository/raw/main/images/project-image.png)
+![Project Image](https://github.com/oiabhishekk/project_Hoobank/blob/main/assets/webpage.png)
