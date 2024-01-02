@@ -17,9 +17,9 @@ const Footer = () => (
             <h4 className="font-poppins font-bold text-[20px] leading-7 text-white">
               {flink.title}
             </h4>
-            <ul>
+            <ul className="list-none mt-4">
               {flink.links.map((link, index) => (
-                <li className={`font-poppins font-normal text-[16px] leading-6 text-dimWhite hover:text-secondary cursor-pointer`} key={link.name}>
+                <li className={`font-poppins font-normal text-[16px] leading-6 text-dimWhite hover:text-secondary cursor-pointer ${index !== flink.links.length - 1 ? "mb-4" : "mb-0"} `} key={link.name}>
                   {link.name}
 
 
@@ -28,6 +28,16 @@ const Footer = () => (
             </ul>
 
           </div>
+        ))}
+
+      </div>
+
+    </div>
+    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3f3e45]" >
+      <p className="font-poppins  font-normal text-center  text-[20px] leading-7 text-white">2021 Hoobank. All Right Reserved. </p>
+      <div className="flex flex-row md:mt-0 mt-6">
+        {socialMedia.map((social,index)=>(
+          <img src={social.icon} alt={social.id} key={social.id} className={`w-[21px] h-[21px] object-contain cursor-pointer ${index!== socialMedia.length-1?"mr-6":"mr-0"}`} />
         ))}
 
       </div>
