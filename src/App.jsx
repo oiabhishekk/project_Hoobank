@@ -30,7 +30,7 @@ function App() {
           <Billing />
           <CardDeals />
           <Testimonials />
-          <Clients />
+          <Clients  />
           <CTA />
           <Footer />
         </div>

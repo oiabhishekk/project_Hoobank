@@ -1,9 +1,40 @@
-import React from 'react'
+import styles from "../style"
+import { logo } from "../../assets"
+import { footerLinks, socialMedia } from "../../constants"
+const Footer = () => (
+  <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`} >
+    <div className={`${styles.flexCenter} md:flex-row flex-col mb-8 w-full`} >
+      <div className={`flex-1 flex flex-col justify-start mb-10`}>
+        <img className='w-[266px] h-[72px] object-contain' src={logo} alt="logo" />
+        <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>
+          A new way to make the payments easy, reliable and secure.
+        </p>
+      </div>
+      <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
+        {footerLinks.map((flink) => (
+          <div key={flink.key} className="flex flex-col ss:my-0 my-4 min-w-[150px]" >
 
-const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
-}
+            <h4 className="font-poppins font-bold text-[20px] leading-7 text-white">
+              {flink.title}
+            </h4>
+            <ul>
+              {flink.links.map((link, index) => (
+                <li className={`font-poppins font-normal text-[16px] leading-6 text-dimWhite hover:text-secondary cursor-pointer`} key={link.name}>
+                  {link.name}
+
+
+                </li>
+              ))}
+            </ul>
+
+          </div>
+        ))}
+
+      </div>
+
+    </div>
+  </section>
+
+)
 
 export default Footer
